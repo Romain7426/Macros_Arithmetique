@@ -40,6 +40,26 @@ Sachant que cela ne fonctionne pas:
 fatal error: 'ARGS_COUNT' macro redefined [-Wmacro-redefined]
 </pre> 
 
+## Installation et compilation
+
+La procédure: 
+
+<pre>
+$ echo "clang" > ./CC 
+$ sh ./configure.sh 
+$ make 
+$ make install 
+</pre>
+
+Les outils devraient compiler sans problème. 
+ 
+La configuration n'est pas basée sur [GNU Autohell](https://en.wikipedia.org/wiki/Autohell), néanmoins nécessite [GNU Make](https://en.wikipedia.org/wiki/GNU_make) (qui est un langage plus sympathique que le [shell standard](https://fr.wikipedia.org/wiki/Bourne_shell)). Si le fichier './configure.sh' ne trouve pas [GNU Make](https://en.wikipedia.org/wiki/GNU_make), il faut éditer le fichier './configure.sh' pour lui indiquer. 
+
+Par défaut, l'installation se fait dans le sous-répertoire './destroot'. Cela peut se changer en éditant le *Makefile*. 
+
+Dans l'ensemble, le programme ne dépend pas de grand chose: un compilateur [C99](https://fr.wikipedia.org/wiki/C_(langage)#Normalisation), et éventuellement [GNU Make](https://en.wikipedia.org/wiki/GNU_make) ([GNU Make](https://en.wikipedia.org/wiki/GNU_make) est utilisé uniquement pour la configuration, pas pour la compilation, le 'Makefile' généré devant être compatible avec n'importe quelle version de [Make](https://en.wikipedia.org/wiki/Make_(software))). Faire compiler le programme ne devrait pas poser de problèmes majeurs (testé avec [clang](https://fr.wikipedia.org/wiki/Clang), [gcc4](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection), [gcc8](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection), et [gcc11](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection); hélas [pcc](https://en.wikipedia.org/wiki/Portable_C_Compiler) se plaint lors de la compilation; hélas [tcc](https://en.wikipedia.org/wiki/Tiny_C_Compiler) génère un programme qui provoque un incident de segmentation). 
+
+
 
 Merci!! :smile: 
 
