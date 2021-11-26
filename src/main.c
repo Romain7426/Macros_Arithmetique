@@ -1834,13 +1834,28 @@
 #define UINT8_ADD(__a__,__b__) UINT8_ADD_X(__a__,__b__)
 
 #define UINT8_ADD_X(__a__,__b__) __a__ ## __b__ ## __PREC 
-  
+
+
+#if 0 
+#define ARGS_COUNT() 0 
+#define ARGS_COUNT(__a1__) 1 
+#define ARGS_COUNT(__a1__,__a2__) 2 
+#define ARGS_COUNT(__a1__,__a2__,__a3__) 3 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__) 4 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__) 5 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__,__a6__) 6 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__,__a6__,__a7__) 7 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__,__a6__,__a7__,__a8__) 8 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__,__a6__,__a7__,__a8__,__a9__) 9 
+#define ARGS_COUNT(__a1__,__a2__,__a3__,__a4__,__a5__,__a6__,__a7__,__a8__,__a9__,__a10__) 10 
+#endif   
 
 
 
 
 
 int main(const int argc, const char * argv[]) { 
+  //return ARGS_COUNT(y,o,q); 
   return UINT8_TO_DIGITS(UINT8_ADD(UINT8_17,UINT8_100)); 
   return UINT8_TO_DIGITS(UINT8_PREC(UINT8_100)); 
   return UINT8_TO_DIGITS(UINT8_SUCC(UINT8_255)); 
