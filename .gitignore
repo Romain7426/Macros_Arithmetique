@@ -1,3 +1,9 @@
+*~
+run
+tools/bin
+tools/build
+build
+
 # Prerequisites
 *.d
 
