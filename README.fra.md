@@ -47,14 +47,14 @@ La procédure:
 
 <pre>
 $ echo "clang" > ./CC        # Ou votre compilateur préféré. 
-$ sh ./configure.sh          # Génère les outils et le Makefile. 
+$ sh ./configure.sh          # Génère d'abord les outils puis le Makefile. 
 $ make 
 $ make install 
 </pre>
  
 Personnalisation 
- - Choix du compilateur: par défaut, le compilateur utilisé est 'cc'; pour indiquer votre compilateur préféré, il faut en donner le chemin dans le fichier './CC'. 
- - Choix du répertoire d'installation: par défaut, le répertoire d'installation est './destroot'; pour indiquer votre lieu préféré, il faut éditer le Makefile généré, voire le fichier './Makefile-gen.mkf' (il est aussi possible de simplement créer un lien symbolique vers './destroot', ou de copier les fichiers dans './destroot' vers le lieu d'installation attendu). 
+ - Choix du compilateur — par défaut, le compilateur utilisé est 'cc'; pour indiquer votre compilateur préféré, il faut en donner le chemin dans le fichier './CC'. 
+ - Choix du répertoire d'installation — par défaut, le répertoire d'installation est './destroot'; pour indiquer votre lieu préféré, il faut éditer le Makefile généré, voire le fichier './Makefile-gen.mkf' (il est aussi possible de simplement créer un lien symbolique vers './destroot', ou de copier les fichiers dans './destroot' vers le lieu d'installation attendu). 
  - Aucune autre configuration possible. (Toutefois, vous pouvez toujours modifier le fichier './Makefile-gen.mkf' à votre convenance.) 
  
 Architecture de la configuration 

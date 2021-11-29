@@ -40,11 +40,11 @@ destroot_do:
 	rm -Rf destroot
 	mkdir -p destroot
 	mkdir -p destroot/bin
-	cp -fp build/*.exe destroot/bin/calc-decimal
+	cp -fp build/*.exe destroot/bin/macros-arithmetique
 	mkdir -p destroot/lib
-	cp -fp build/calc.a destroot/lib/decimal.a
+	cp -fp build/macros-arithmetique.a destroot/lib/macros-arithmetique.a
 	mkdir -p destroot/include
-	cp -fp src/decimal.h destroot/include/
+#	cp -fp src/decimal.h destroot/include/
 
 
 
@@ -59,7 +59,7 @@ run: build/macros-arithmetique.exe
 
 
 build/macros-arithmetique.exe: build/macros-arithmetique.a build/main.o 
-	/usr/bin/cc -o build/macros-arithmetique.exe build/main.o build/macros-arithmetique.a -lm      2>&1
+	/usr/bin/cc -o build/macros-arithmetique.exe build/main.o build/macros-arithmetique.a     2>&1
 
 
 build/macros-arithmetique.a: 
