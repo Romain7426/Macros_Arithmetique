@@ -53,7 +53,7 @@ $ make install
 </pre>
  
 Personnalisation 
- - Choix du [compilateur](https://fr.wikipedia.org/wiki/Compilateur) — par défaut, le [compilateur](https://fr.wikipedia.org/wiki/Compilateur) utilisé est 'cc'; pour utiliser votre [compilateur](https://fr.wikipedia.org/wiki/Compilateur) préféré, il faut en indiquer le chemin dans le fichier './CC'. 
+ - Choix du [compilateur](https://fr.wikipedia.org/wiki/Compilateur) — par défaut, le [compilateur](https://fr.wikipedia.org/wiki/Compilateur) utilisé est 'cc'; pour utiliser votre [compilateur](https://fr.wikipedia.org/wiki/Compilateur) préféré, il faut en indiquer le chemin dans le fichier './CC' (par exemple, «$ echo "/usr/local/bin/x86_64-unknown-openbsd7.0-gcc-11.2.0" > ./CC»). 
  - Choix du répertoire d'installation — par défaut, le répertoire d'installation est './destroot'; pour indiquer votre lieu préféré, il faut éditer le Makefile généré, voire le fichier './Makefile-gen.mkf' (il est aussi possible de simplement créer un lien symbolique vers './destroot', ou de copier les fichiers dans './destroot' vers le lieu d'installation attendu). 
  - Aucune autre configuration possible. (Toutefois, vous pouvez toujours modifier le fichier './Makefile-gen.mkf' à votre convenance.) 
  
