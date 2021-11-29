@@ -312,7 +312,7 @@ Makefile:
 	echo "	rm -Rf build 2>&1" >> $@
 	echo "" >> $@
 	echo "clean-all: clean" >> $@
-	echo "	rm -Rf destroot run rundir *~ .*~ src/*~ src/*.output src/chaman.anime.ci COPYING_at_start_of_c_files $(patsubst %,src/%.c,$(SRC_Y)) $(patsubst %,src/%.c,$(SRC_L)) 2>&1" >> $@
+	echo "	rm -Rf destroot run rundir *~ .*~ src/*~ src/*.output COPYING_at_start_of_c_files $(patsubst %,src/%.c,$(SRC_Y)) $(patsubst %,src/%.c,$(SRC_L)) 2>&1" >> $@
 	echo "" >> $@
 	echo "" >> $@
 	echo "Makefile: Makefile-gen.mkf" >> $@
@@ -357,13 +357,6 @@ Makefile:
 	echo "	ar -r -c $(LIB) $(OBJ) 2>&1" >> $@
 	echo "	ranlib $(LIB) 2>&1" >> $@
 	echo "" >> $@
-	echo "" >> $@
-	echo "" >> $@
-	echo "" >> $@
-	echo "" >> $@
-	echo "" >> $@
-	echo "src/chaman.anime.ci: src/chaman.anime" >> $@
-	echo "	cat src/chaman.anime | ./tools/bin/text2cstring > src/chaman.anime.ci " >> $@
 	echo "" >> $@
 	echo "" >> $@
 	echo "" >> $@
