@@ -54,7 +54,7 @@ $ make install
  
 Personnalisation 
  - Choix du [compilateur](https://fr.wikipedia.org/wiki/Compilateur) — par défaut, le [compilateur](https://fr.wikipedia.org/wiki/Compilateur) utilisé est 'cc'; pour utiliser votre [compilateur](https://fr.wikipedia.org/wiki/Compilateur) préféré, il faut en indiquer le chemin dans le fichier ['./CC'](https://github.com/Romain7426/Macros_Arithmetique/blob/main/CC) (par exemple, «$ echo "/usr/local/bin/x86_64-unknown-openbsd7.0-gcc-11.2.0" > ./CC»). 
- - Choix du répertoire d'installation — par défaut, le répertoire d'installation est './destroot'; pour indiquer votre lieu préféré, il faut éditer le [Makefile](https://fr.wikipedia.org/wiki/Make#Makefile) généré, voire le fichier ['./Makefile-gen.mkf'](https://github.com/Romain7426/Macros_Arithmetique/blob/main/Makefile-gen.mkf) (il est aussi possible de simplement créer un lien symbolique vers './destroot', ou de copier les fichiers depuis './destroot' vers le lieu d'installation attendu). 
+ - Choix du répertoire d'installation — par défaut, le répertoire d'installation est './destroot'; pour indiquer votre lieu préféré, il faut éditer le [Makefile](https://fr.wikipedia.org/wiki/Make#Makefile) généré, voire éditer le fichier ['./Makefile-gen.mkf'](https://github.com/Romain7426/Macros_Arithmetique/blob/main/Makefile-gen.mkf) (il est aussi possible de simplement créer un lien symbolique vers './destroot', ou de copier les fichiers depuis './destroot' vers le lieu d'installation voulu). 
  - Aucune autre configuration possible. (Toutefois, vous pouvez toujours modifier le fichier ['./Makefile-gen.mkf'](https://github.com/Romain7426/Macros_Arithmetique/blob/main/Makefile-gen.mkf) à votre convenance.) 
  
 Architecture de la configuration 
@@ -83,16 +83,9 @@ Plaintes
  - Les systèmes compatibles avec [Unix](https://fr.wikipedia.org/wiki/Unix) devraient fonctionner. 
  - Sur [Windows](https://fr.wikipedia.org/wiki/Microsoft_Windows), nous ne savons pas, nous n'avons pas essayé, mais le programme devrait pouvoir fonctionner à travers [Cygwin](https://fr.wikipedia.org/wiki/Cygwin), [MinGW](https://fr.wikipedia.org/wiki/MinGW), etc. 
  
-
-La configuration nécessite 
-Les outils devraient compiler sans problème. 
- 
- 
-La configuration n'est pas basée sur [GNU Autohell](https://en.wikipedia.org/wiki/Autohell). Néanmoins nous utilisons [GNU Make](https://en.wikipedia.org/wiki/GNU_make). (qui est un langage plus sympathique que le [shell standard](https://fr.wikipedia.org/wiki/Bourne_shell)). Si le fichier './configure.sh' ne trouve pas [GNU Make](https://en.wikipedia.org/wiki/GNU_make), il faut éditer le fichier './configure.sh' pour lui indiquer. 
-
-Par défaut, l'installation se fait dans le sous-répertoire './destroot'. Cela peut se changer en éditant le *Makefile*. 
-
-Dans l'ensemble, le programme ne dépend pas de grand chose: un compilateur [C99](https://fr.wikipedia.org/wiki/C_(langage)#Normalisation), et éventuellement [GNU Make](https://en.wikipedia.org/wiki/GNU_make) ([GNU Make](https://en.wikipedia.org/wiki/GNU_make) est utilisé uniquement pour la configuration, pas pour la compilation, le 'Makefile' généré devant être compatible avec n'importe quelle version de [Make](https://en.wikipedia.org/wiki/Make_(software))). Faire compiler le programme ne devrait pas poser de problèmes majeurs (testé avec [clang](https://fr.wikipedia.org/wiki/Clang), [gcc11](https://fr.wikipedia.org/wiki/GNU_Compiler_Collection), et [tcc](https://en.wikipedia.org/wiki/Tiny_C_Compiler); hélas [pcc](https://en.wikipedia.org/wiki/Portable_C_Compiler) se plaint lors de la compilation). 
+Dépendances: 
+ - Un [compilateur](https://fr.wikipedia.org/wiki/Compilateur) compatible avec la norme [C99](https://fr.wikipedia.org/wiki/C_(langage)#Normalisation). 
+ - [GNU Make](https://en.wikipedia.org/wiki/GNU_make). 
 
 
 ## Auteurs  
@@ -103,7 +96,7 @@ Auteurs:
 
 ## [Propriété intellectuelle](https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_intellectuelle) 
  
-Nous ne portons aucun intérêt à la [propriété intellectuelle](https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_intellectuelle) du présent programme. Vous pouvez faire ce que il vous plaît avec ce programe. 
+Nous ne portons aucun intérêt à la [propriété intellectuelle](https://fr.wikipedia.org/wiki/Propri%C3%A9t%C3%A9_intellectuelle) du présent programme (ni en général, sauf pour étudier les principes et énoncer que nous les désapprouvons). Vous pouvez faire ce que il vous plaît avec ce programe. 
 
 Nous aurions bien laissé ce programme dans le [domaine public](https://fr.wikipedia.org/wiki/Domaine_public_(propri%C3%A9t%C3%A9_intellectuelle)), mais il semblerait que il existerait une possibilité pour s'approprier du matériel qui serait dans le domaine public, et d'en restreindre l'accès. Afin de prévenir ce cas dégénéré, ce programme a été publié sous une licence équivalente à la [licence ISC](https://fr.wikipedia.org/wiki/Licence_ISC), mais en plus relâchée (cf. le fichier [COPYING](https://github.com/Romain7426/Calculatrice_decimale/blob/main/COPYING) pour la consulter in extenso). En ce qui nous concerne, vous pouvez faire ce que vous voulez avec ce programme et son code, dans la mesure vous n'empêchez personne de l'utiliser, y compris nous-mêmes. 
 
