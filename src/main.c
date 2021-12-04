@@ -1852,7 +1852,7 @@
 
 
 
-
+#define DUMMY (1+2)
 
 int main(const int argc, const char * argv[]) { 
   //return ARGS_COUNT(y,o,q); 
@@ -1861,6 +1861,7 @@ int main(const int argc, const char * argv[]) {
   return UINT8_TO_DIGITS(UINT8_SUCC(UINT8_255)); 
   return UINT8_TO_DIGITS(UINT8_INFINITY); 
   return UINT8_TO_DIGITS(UINT8_255); 
+  return DUMMY; 
 }; 
 
 

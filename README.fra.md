@@ -11,6 +11,34 @@ J'en suis venu à cette problématique pour deux choses:
 
 
 À ÉCRIRE 
+
+Pour les additions, cela fonctionne: 
+<pre>
+#define DUMMY (1+2)
+int main(const int argc, const char * argv[]) { 
+  //return ARGS_COUNT(y,o,q); 
+  return UINT8_TO_DIGITS(UINT8_ADD(UINT8_17,UINT8_100)); 
+  return UINT8_TO_DIGITS(UINT8_PREC(UINT8_100)); 
+  return UINT8_TO_DIGITS(UINT8_SUCC(UINT8_255)); 
+  return UINT8_TO_DIGITS(UINT8_INFINITY); 
+  return UINT8_TO_DIGITS(UINT8_255); 
+  return DUMMY; 
+}; 
+</pre>
+
+Ce qui donne avec «cc -E»: 
+<pre>
+int main(const int argc, const char * argv[]) {
+
+  return 117;
+  return 99;
+  return 0;
+  return 0;
+  return 255;
+  return (1+2);
+};
+</pre>
+
  
 Pour les soustractions, nécessite une deuxième lettre 'N': «PPPPPNN -> PPP». 
  
